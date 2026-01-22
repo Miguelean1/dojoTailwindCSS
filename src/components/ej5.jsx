@@ -11,3 +11,11 @@
 
 
 */
+
+export default function TextoResponsive() {
+  return (
+    <div className="text-sm md:text-lg lg:text-2xl bg-red-200 md:bg-yellow-200 lg:bg-green-200">
+      Este texto cambia de tamaño y color de fondo según el tamaño de pantalla.
+    </div>
+  );
+}
