@@ -7,7 +7,7 @@ dentro coloca un párrafo con texto mediano y negrita. usa clases tailwind direc
 
 */
 
-export default function () {
+export default function Cajita() {
   return (
     <div className="bg-zinc-200 p-6 rounded-lg shadow-md">
       <p className="text-md font-bold">

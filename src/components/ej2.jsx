@@ -9,7 +9,7 @@
 
 */
 
-export default function flexbox() {
+export default function Flexbox() {
   return (
     <div className="flex items-center justify-center gap-4 h-screen">
       <div className="w-[50px] h-[50px] bg-red-500"></div>
