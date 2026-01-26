@@ -31,7 +31,7 @@ export default function App() {
           <Card
             title="Usuario Ejemplo"
             description="Descripción simple del usuario usando Tailwind."
-            image="https://via.placeholder.com/400x200"
+            image="https://res.cloudinary.com/dhhxrrgut/image/upload/v1764547033/Frame_4_ihawip.png"
           />
           <BotonInteractivo />
         </section>
@@ -42,7 +42,6 @@ export default function App() {
         
         <section className="flex flex-col items-center">
           <h3 className="text-2xl font-bold mb-6">
-            Actividades
           </h3>
           <ListaConHover />
         </section>
