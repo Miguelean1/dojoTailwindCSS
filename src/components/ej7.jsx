@@ -13,25 +13,18 @@
 import { useState } from 'react';
 
 export default function BotonInteractivo() {
-  const [estado, setEstado] = useState('blue');
-  const [texto, setTexto] = useState('Inactivo');
-
-  const toggleEstado = () => {
-    if (estado === 'blue') {
-      setEstado('green');
-      setTexto('Activo');
-    } else {
-      setEstado('blue');
-      setTexto('Inactivo');
-    }
-  };
+  const [activo, setActivo] = useState(false);
 
   return (
     <button 
-      className={`bg-${estado}-500 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:${estado === 'blue' ? 'bg-blue-600' : 'bg-green-600'} active:scale-95`}
-      onClick={toggleEstado}
+      className={`px-6 py-3 rounded-lg font-medium text-white transition-all duration-200 active:scale-95 ${
+        activo 
+          ? 'bg-green-500 hover:bg-green-600' 
+          : 'bg-blue-500 hover:bg-blue-600'
+      }`}
+      onClick={() => setActivo(!activo)}
     >
-      {texto}
+      {activo ? 'Activo' : 'Inactivo'}
     </button>
   );
 }

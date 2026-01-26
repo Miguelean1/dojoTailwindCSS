@@ -13,3 +13,5 @@
 * prueba los breakpoints y los efectos hover para int
 
 */
+
+//Ejercicio realizado en App.jsx

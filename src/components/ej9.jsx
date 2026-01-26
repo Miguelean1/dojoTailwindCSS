@@ -8,44 +8,22 @@
 * usa flexbox y breakpoints.
 
 */
-import { useState } from 'react';
-
-export default function ResponsiveNavbar() {
-  const [menuAbierto, setMenuAbierto] = useState(false);
-
+export default function Navbar() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <nav className="bg-blue-500 text-white px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">MiLogo</div>
+    <nav className="bg-blue-500 p-4 text-white">
+      <div className="flex flex-col md:flex-row justify-between items-center">
 
-          <button
-            onClick={() => setMenuAbierto(!menuAbierto)}
-            className="md:hidden text-white text-3xl"
-          >
-            ☰
-          </button>
-
-          <div className="hidden md:flex space-x-6">
-            <a href="#inicio" className="hover:text-blue-200">Inicio</a>
-            <a href="#servicios" className="hover:text-blue-200">Servicios</a>
-            <a href="#contacto" className="hover:text-blue-200">Contacto</a>
-          </div>
+        <div className="text-2xl font-bold mb-4 md:mb-0">
+          Logo
         </div>
 
-        {menuAbierto && (
-          <div className="md:hidden mt-4 flex flex-col space-y-3">
-            <a href="#inicio" className="hover:text-blue-200">Inicio</a>
-            <a href="#servicios" className="hover:text-blue-200">Servicios</a>
-            <a href="#contacto" className="hover:text-blue-200">Contacto</a>
-          </div>
-        )}
-      </nav>
+        <div className="flex flex-col md:flex-row gap-4">
+          <a href="#" className="hover:text-blue-200 transition-colors">Enlace 1</a>
+          <a href="#" className="hover:text-blue-200 transition-colors">Enlace 2</a>
+          <a href="#" className="hover:text-blue-200 transition-colors">Enlace 3</a>
+        </div>
 
-      <div className="px-6 py-12">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">Bienvenido</h1>
-        <p className="text-gray-600">Navbar responsive con Tailwind CSS</p>
       </div>
-    </div>
+    </nav>
   );
 }
